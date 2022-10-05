@@ -1,0 +1,92 @@
+########################################
+# EECS1015- Fall 2022
+# Lab 1
+#
+# Your name: Angelina Scott
+# Your section: A
+# Your student ID: 219523109
+# Your email contact: lina21@my.yorku.ca
+#######################################
+
+# Introduction
+print('''Name: Angelina Scott
+Section: A
+Student ID: 219523109
+email: lina21@my.yorku.ca
+
+''')
+
+# Task 1
+print('\n---- Task 1: Currency converter ----')
+
+# Asks user for starting amount in CAD
+cadCurrency = float(input("Amount in Canadian dollars: "))
+
+# Processes float and outputs various currencies dependent on the users input for cadCurrency
+usdCurrency = cadCurrency*0.76
+eurCurrency = cadCurrency*0.75
+ngnCurrency = cadCurrency*322.24
+cnyCurrency = cadCurrency*5.25
+inrCurrency = cadCurrency*97.14
+
+print('''
+Amount in other currencies:
+USD: {:.2f}
+EUR: {:.2f}
+NGN: {:.2f}
+CNY: {:.2f}
+INR: {:.2f}
+'''.format(usdCurrency, eurCurrency, ngnCurrency, cnyCurrency, inrCurrency))
+
+
+# Task 2
+print('\n---- Task 2: String math ----')
+print("Enter three strings:")
+# Gets string input from user and stores in variables str1-str3
+str1 = input("str1: ")
+str2 = input("str2: ")
+str3 = input("str3: ")
+
+print("String concatenation:")
+print("str1 + str2 + str3 = ", str1+str2+str3)
+print("str3 + str2 + str1 = ", str3+str2+str1)
+print("str2 + str1 + str3", str2+str1+str3)
+
+print("String multiply:")
+
+num = int(input("Input an integer: "))
+
+print("num x str1 = ", num*str1)
+print("num x str2+str3 = ", (str2+str3)*num)
+print()
+
+# Task 3
+print("\n---- Task 3: Math operators ----")
+x = int(input("Input integer x: "))
+y = int(input("Input integer y: "))
+
+print("Integer math:")
+print("x / y = ", x/y)
+print("x // y = ", x//y)
+print("x % y = ", x%y)
+print("x ** y = ", x**y)
+
+xF = float(input("Input float: "))
+yF = float(input("Input float: "))
+
+print("Float math:")
+print("x / y = ", xF/yF)
+print("x // y = ", xF//yF)
+print("x % y = ", xF%yF)
+print("x ** y = ", xF**yF)
+print()
+
+# Task 4
+print('\n---- Task 4: Simple cylinder computation ----')
+r = float(input("Radius: "))
+h = float(input("Height: "))
+print("Cylinder surface area: ", (2*355/113*r*h)+2*355/113*r**2)
+print("Cylinder volume: ", 3.14159*(r**2)*h)
+
+print("\n---- FINISHED ----")
+input("Press enter to end.")
