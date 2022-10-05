@@ -1,0 +1,78 @@
+#########
+# EECS1015 Fall 2022
+# Lab 2
+# Name: Angelina Scott
+# Sudent id: 219523109
+#########
+
+print("---- Lab 2 ----")
+print("Name: Angelina Scott")
+print("Section A")
+print("Student id: 219523109")
+print("Email: lina21@my.yorku.ca")
+
+# Task 1
+print("\n---- Task 1: Three year investment return ----")
+name = input("Name: ")
+inAmount = float(input("Initial amount: $ "))
+rateReturn = float(input("Rate of return: % "))
+rateRPrecent = rateReturn/100
+amount1 = inAmount+(inAmount*rateRPrecent)
+amount2 = amount1+(amount1*rateRPrecent)
+amount3 = amount2+(amount2*rateRPrecent)
+intro = f"Client: {name.strip().title()}, yearly rate of return multiplier: {rateRPrecent:.2f}"
+
+year1 = f"Year: 1  Starting amount: ${inAmount:8.2f}        Ending Amount: ${amount1:8.2f}"
+year2 = f"Year: 2  Starting amount: ${amount1:8.2f}        Ending Amount: ${amount2:8.2f}"
+year3 = f"Year: 3  Starting amount: ${amount2:8.2f}        Ending Amount: ${amount3:8.2f}"
+
+print(intro)
+print(year1)
+print(year2)
+print(year3)
+
+# Task 2
+print("\n----Task 2 Leetspeak converter ----")
+longString = input("Type a long string: ")
+
+leetspeak = longString.upper().replace("T", "7").replace("A", "^").replace("E", "3").replace("I", "!").replace("B", "8").replace("O", ".").replace("C", "<").replace("S", "$")
+print(leetspeak)
+
+
+# task 3
+print("\n---- Task 3: Substring highlighter ----")
+lString = input("Enter a long sentence: ")
+substring = input("Enter substring: ")
+lenSub = len(substring)
+subIndex = lString.find(substring)
+
+beforeIndex = lString[:subIndex]
+afterIndex = lString[subIndex+(lenSub):]
+
+secIndex = afterIndex.find(substring)
+
+beforeSec = beforeIndex[:secIndex-1]
+afterSec = afterIndex[secIndex+(lenSub):]
+
+newString = beforeIndex + "*" + substring.upper() + "* " + beforeSec + "*" + substring.upper() + "*" + afterSec
+
+
+print(f"Sentence has {len(lString)} characters, substring has {len(substring)}")
+
+print(f"Substring highlighted: \n{newString}")
+
+# task 4
+print("\n---- Task 4: Exponent ----")
+exponent = input("Input exponent in the form x^y: ")
+
+x = int(exponent[0:1])
+y = int(exponent[-1:])
+eqXY = x**y
+
+print(f"Extracted numbers {x} {y}")
+
+print(f"{x}^{y} = " + str(eqXY))
+
+# pause program until enter is pressed
+print("\n---- Lab 2 Done ----")
+input("Press enter to exit.")
